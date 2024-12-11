@@ -10,6 +10,7 @@ function App() {
     name: string;
     size: number;
     type: string;
+    d;
   }
 
   const handleChange = (file: File) => {
