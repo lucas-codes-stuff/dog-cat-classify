@@ -34,7 +34,7 @@ train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_data, batch_size=32, shuffle=False)
 
 # Load pre-trained ResNet model
-model = models.resnet18(pretrained=True)
+model = models.resnet18(weights=None)
 
 # Replace the final later with the two output classes
 num_ftrs = model.fc.in_features # Number of input features to the final layer
