@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend ./backend
 
 # Copy React build files into the backend folder
-COPY frontend/build ./backend/build
+# COPY frontend/build ./backend/build
 
 # Expose the port
 EXPOSE 7860
