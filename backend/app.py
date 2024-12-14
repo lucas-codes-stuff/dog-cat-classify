@@ -38,7 +38,7 @@ async def serve_static(full_path: str):
 
 
 # Load the model
-model_path = hf_hub_download(repo_id="Lucas-F/cat-dog-model", filename="model.pth") 
+model_path = hf_hub_download(repo_id="Lucas-F/cat-dog-model", filename="model.pth", cache_dir="/tmp") 
 # Set cpu if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
