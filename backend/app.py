@@ -42,7 +42,7 @@ model_path = os.path.join(os.path.dirname(__file__), "model.pth")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-# Define model (resnet18)
+# Define model (resnet18) 
 from torchvision.models import resnet18
 
 model = resnet18(weights=None)
