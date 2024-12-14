@@ -8,6 +8,7 @@ from torchvision import transforms
 import io
 import os
 import torch.nn.functional as F
+from huggingface_hub import hf_hub_download
 
 # init FastAPI
 app = FastAPI()
@@ -37,7 +38,7 @@ async def serve_static(full_path: str):
 
 
 # Load the model
-model_path = os.path.join(os.path.dirname(__file__), "model.pth")
+model_path = hf_hub_download(repo_id="Lucas-F/cat-dog-model", filename="model.pth") 
 # Set cpu if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
