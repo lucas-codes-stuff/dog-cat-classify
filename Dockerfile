@@ -15,7 +15,7 @@ COPY backend ./backend
 COPY frontend/build ./backend/build
 
 # Expose the port
-EXPOSE 8000
+EXPOSE 7860
 
 # Run the backend
 CMD ["uvicorn", "backend.app:app", "--host", "0.0.0.0", "--port", "7860"]
